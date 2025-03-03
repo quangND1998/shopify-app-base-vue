@@ -6,16 +6,27 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "firebase/php-jwt": "^6.11",
         "guzzlehttp/guzzle": "^7.2",
         "inertiajs/inertia-laravel": "^0.6.8",
         "laravel/breeze": "*",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
+        "phpclassic/php-shopify": "^1.2",
         "predis/predis": "2.0",
         "quangnd/repository": "^1.2",
+        "quangnd/response": "^1.0",
+        "quangnd/shopify": "dev-main",
         "tightenco/ziggy": "^2.0"
     },
+   "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/quangND1998/shopify"
+        }
+    ],
+
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",

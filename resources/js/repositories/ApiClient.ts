@@ -1,16 +1,15 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios from './axiosInstances';
 
+// axios.defaults.baseURL = process.env.MIX_APP_URL || '';
+axios().defaults.headers.post['Content-Type'] = 'application/json';
+axios().defaults.headers.post['Accept'] = 'application/json';
+axios().defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 class ApiClient {
   private client: AxiosInstance;
 
   constructor() {
-    this.client = axios.create({
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'X-Requested-With': 'XMLHttpRequest',
-      },
-    });
+    this.client = axios();
   }
 
   private handleResponse(response: AxiosResponse) {

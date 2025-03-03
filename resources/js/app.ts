@@ -9,6 +9,8 @@ import { VueQueryPlugin} from '@tanstack/vue-query';
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 import queryClient from '@/queryClient';
 import { createPinia } from 'pinia'
+import PolarisVue from '@ownego/polaris-vue'
+import '@ownego/polaris-vue/dist/style.css'
 
 const pinia = createPinia()
 
@@ -20,6 +22,7 @@ createInertiaApp({
             .use(plugin)
             .use(ZiggyVue)
             .use(pinia)
+            .use(PolarisVue) 
             .use(VueQueryPlugin, { queryClient })
             .mount(el);
     },
